@@ -30,16 +30,6 @@ function AddBook() {
   }
   return (
     <>
-      <form>
-        <label>
-          Room type:
-          <select>
-            <option value="1">Completed</option>
-            <option value="2">In Completed</option>
-          </select>
-        </label>
-      </form>
-
       <form onSubmit={(e) => handleSubmit(e)}>
         <label htmlFor="task">New Todo: </label>
         input

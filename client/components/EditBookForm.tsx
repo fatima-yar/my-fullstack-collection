@@ -1,14 +1,9 @@
-import {
-  QueryClient,
-  useMutation,
-  useQuery,
-  useQueryClient,
-} from '@tanstack/react-query'
-import { useState, FormEvent, ChangeEvent } from 'react'
-import { Book, BookData, UpdatedBook } from '../../models/books'
-import { fetchBooks, updateBook } from '../apis/apiClient'
+import { useMutation, useQueryClient } from '@tanstack/react-query'
+import { useState, useEffect } from 'react'
+import { UpdatedBook } from '../../models/books'
+import { updateBook } from '../apis/apiClient'
 import React from 'react'
-import { getAllBooks } from '../../server/db/db'
+
 interface Props {
   id: number | undefined
   completed: boolean
@@ -24,32 +19,44 @@ function EditBookForm(props: Props) {
       queryClient.invalidateQueries({ queryKey: ['books'] })
     },
   })
+
   const [isDone, setIsDone] = useState(false)
 
+  useEffect(() => {
+    setIsDone(props.completed)
+  }, [props.completed])
+
   function handleChange(event: React.ChangeEvent<HTMLSelectElement>) {
-    const booleanValue = Boolean(event.target.value)
+    const booleanValue = event.target.value === '1'
+
+    // const booleanValue = Boolean(event.target.value)
     setIsDone(booleanValue)
+
+    // Call mutation function immediately after changing the value
+    editBookMutation.mutate({ id: props.id, completed: booleanValue })
+
     console.log(booleanValue)
   }
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    console.log(props.id)
-    event.preventDefault()
-    editBookMutation.mutate({ id: props.id, completed: isDone })
-  }
+  // function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  //   // console.log(props.id)
+  //   event.preventDefault()
+  //   editBookMutation.mutate({ id: props.id, completed: isDone })
+  // }
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
+    // <form onSubmit={(e) => handleSubmit(e)}>
+    <form>
       <label>
         Completed Yet?
         <select
           onChange={(e) => handleChange(e)}
-          defaultValue={props.completed ? 'No' : 'Yes'}
+          defaultValue={props.completed ? '1' : '0'}
         >
           <option value="1">Yes</option>
           <option value="0">No</option>
         </select>
       </label>
-      <button>Submit</button>
+      {/* <button type="submit">Submit</button> */}
     </form>
   )
 }

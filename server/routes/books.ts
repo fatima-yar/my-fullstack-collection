@@ -51,7 +51,7 @@ router.patch('/:id', async (req, res) => {
 
     const updatedBook = req.body
     console.log(updatedBook)
-    await db.updateBook(updatedBook, id)
+    await db.updateBook(id, updatedBook)
     res.sendStatus(200)
   } catch (error) {
     console.error(`database error: ${error}`)

@@ -1,5 +1,5 @@
 import request from 'superagent'
-import { Book, BookData } from '../../models/books'
+import { Book, BookData, UpdatedBook } from '../../models/books'
 
 const rootUrl = '/api/v1/books/'
 
@@ -13,11 +13,11 @@ export async function addBook(book: string) {
 
   const newBook: Book = {
     title: book,
-    compeleted: false,
+    completed: false,
   }
   await request.post(rootUrl).send(newBook)
 }
 
-export async function updateBook(updatedBook: string, id: number) {
-  await request.patch(`${rootUrl}${id}`).send(updatedBook)
+export async function updateBook({ id, completed }: UpdatedBook) {
+  await request.patch(`${rootUrl}${id}`).send({ completed })
 }

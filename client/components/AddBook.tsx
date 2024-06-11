@@ -30,13 +30,25 @@ function AddBook() {
   }
   return (
     <>
+      <form>
+        <label>
+          Room type:
+          <select>
+            <option value="1">Completed</option>
+            <option value="2">In Completed</option>
+          </select>
+        </label>
+      </form>
+
       <form onSubmit={(e) => handleSubmit(e)}>
         <label htmlFor="task">New Todo: </label>
+        input
         <input
           onChange={(e) => handleChange(e)}
           id="title"
           name="title"
           className="new-todo"
+          aria-label="input new todo"
           placeholder="What needs to be done?"
           value={form}
         />

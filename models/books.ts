@@ -3,7 +3,10 @@ export interface Book {
   title: string
   author?: string
   pages?: number
-  compeleted: boolean
+  completed: boolean
 }
-
+export interface UpdatedBook {
+  id: number | undefined
+  completed: boolean
+}
 export type BookData = Omit<Book, 'id'>

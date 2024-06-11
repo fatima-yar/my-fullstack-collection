@@ -17,6 +17,6 @@ export function deleteBooks(id: number) {
   return connection('books').where({ id }).delete()
 }
 
-export function updateBook(title: BookData, id: number) {
-  return connection('books').where({ id }).update(title)
+export function updateBook(id: number, completed: boolean) {
+  return connection('books').where({ id }).update(completed)
 }

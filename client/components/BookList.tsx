@@ -1,4 +1,5 @@
 import { Book } from '../../models/books'
+import EditBookForm from './EditBookForm'
 
 interface BookListprops {
   books: Book[]
@@ -16,7 +17,8 @@ export default function BookList({ books }: BookListprops) {
             <h3>Title: {book.title}</h3>
             <p>Author: {book.author}</p>
             <p>Pages: {book.pages}</p>
-            <p>Compeleted? {book.compeleted}</p>
+            <EditBookForm id={book.id} completed={book.completed} />
+            <p>Compeleted? {book.completed}</p>
           </li>
         ))}
       </ul>

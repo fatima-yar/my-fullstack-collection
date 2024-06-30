@@ -31,7 +31,7 @@ function AddBook() {
   return (
     <>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <label htmlFor="task">New Todo: </label>
+        <label htmlFor="title">New Todo: </label>
         input
         <input
           onChange={(e) => handleChange(e)}

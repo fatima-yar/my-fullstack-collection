@@ -19,10 +19,12 @@ function App() {
   if (books) {
     return (
       <>
-        <header className="header">
-          <h1>My Collection</h1>
-          <AddBook />
-          <br />
+        <header>
+          <div className="header">
+            <h1>My Collection</h1>
+            <AddBook />
+            <br />
+          </div>
           <BookList books={books} />
         </header>
         <section className="main">{/* add your code here */}</section>

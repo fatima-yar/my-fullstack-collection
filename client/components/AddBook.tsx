@@ -31,17 +31,19 @@ function AddBook() {
   return (
     <>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <label htmlFor="title">New Todo: </label>
-        input
+        <label htmlFor="title">Add New Book: </label>
+
         <input
           onChange={(e) => handleChange(e)}
           id="title"
           name="title"
-          className="new-todo"
-          aria-label="input new todo"
-          placeholder="What needs to be done?"
+          className="new-book"
+          aria-label="input new book"
+          placeholder="What is your new book"
           value={form}
+          style={{ height: '40px' }} // Adjust the height value as needed
         />
+
         <button>Submit</button>
       </form>
     </>

@@ -39,6 +39,7 @@ router.delete('/:id', async (req, res) => {
   try {
     const id = Number(req.params.id)
     await db.deleteBooks(id)
+    res.sendStatus(200)
   } catch (error) {
     console.error(`database error: ${error}`)
     res.sendStatus(500)

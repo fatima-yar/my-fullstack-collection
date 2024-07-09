@@ -1,5 +1,6 @@
 import request from 'superagent'
 import { Book, BookData, UpdatedBook } from '../../models/books'
+import { useMutation, useQueryClient } from '@tanstack/react-query'
 
 const rootUrl = '/api/v1/books/'
 
@@ -8,16 +9,30 @@ export async function fetchBooks(): Promise<Book[]> {
   return res.body
 }
 
-export async function addBook(book: string) {
+export async function addBook(book: string, pages: number, author: string) {
   console.log('API:', book)
 
   const newBook: Book = {
     title: book,
     completed: false,
+    author: author,
+    pages: pages,
   }
   await request.post(rootUrl).send(newBook)
 }
 
 export async function updateBook({ id, completed }: UpdatedBook) {
   await request.patch(`${rootUrl}${id}`).send({ completed })
+}
+
+export default function useDeleteBooks(id: number) {
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: async () => {
+      await request.delete(`/api/v1/books/${id}`)
+    },
+    onSuccess: async () => {
+      queryClient.invalidateQueries({ queryKey: ['book'] })
+    },
+  })
 }

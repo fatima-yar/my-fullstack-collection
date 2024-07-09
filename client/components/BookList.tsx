@@ -9,16 +9,16 @@ export default function BookList({ books }: BookListprops) {
   return (
     <>
       <div>
-        <h2>My Books</h2>
+        <h2 className="mybook">My Books</h2>
       </div>
       <ul>
         {books.map((book: Book) => (
-          <li key={book.id}>
+          <li key={book.id} className="bookslist">
             <h3>Title: {book.title}</h3>
             <p>Author: {book.author}</p>
             <p>Pages: {book.pages}</p>
             <EditBookForm id={book.id} completed={book.completed} />
-            <p>Compeleted? {book.completed}</p>
+            {/* <p>Compeleted? {book.completed}</p> */}
           </li>
         ))}
       </ul>

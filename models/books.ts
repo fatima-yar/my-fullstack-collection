@@ -1,8 +1,9 @@
 export interface Book {
+  [x: string]: unknown
   id?: number
   title: string
-  author?: string
-  pages?: number
+  author: string
+  pages: number
   completed: boolean
 }
 export interface UpdatedBook {

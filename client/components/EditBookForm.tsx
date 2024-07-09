@@ -38,17 +38,13 @@ function EditBookForm(props: Props) {
     console.log(booleanValue)
   }
 
-  // function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-  //   // console.log(props.id)
-  //   event.preventDefault()
-  //   editBookMutation.mutate({ id: props.id, completed: isDone })
-  // }
   return (
     // <form onSubmit={(e) => handleSubmit(e)}>
     <form>
       <label>
         Completed Yet?
         <select
+          className="drop"
           onChange={(e) => handleChange(e)}
           defaultValue={props.completed ? '1' : '0'}
         >
@@ -61,39 +57,3 @@ function EditBookForm(props: Props) {
   )
 }
 export default EditBookForm
-//drop down forms
-//boolean forms
-//update boolean  updated state
-//use state
-
-// function DropdownList() {
-// const [isDone, setIsDone] = useState(false)
-// const { data: Book } = useQuery({
-//   queryKey = ['books'],
-//   queryFn: () => fetchBooks(),
-// })
-
-//   const quesryClient= useQueryClient()
-//   const bookMutation=useMutation({
-//     mutationFn: updateBook,
-//     quesryClient.inva
-//   })
-
-//  const handleSubmit = (event: FormEvent)=>{
-//   event.preventDefault()
-//   setIsDone(true)
-//   onSubmit(isDone)
-//  }
-
-//   return(
-// <form onSubmit={handleSubmit}>
-//           <label>
-//             Completed Yet?
-//             <select>
-//               <option value="1">Yes</option>
-//               <option value="0">No</option>
-//             </select>
-//           </label>
-// </form>
-//   )
-// }

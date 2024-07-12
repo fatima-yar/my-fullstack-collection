@@ -6,7 +6,7 @@ const router = Router()
 router.get('/', async (req, res) => {
   try {
     const books = await db.getAllBooks()
-    res.json(books)
+    res.json(books.reverse())
   } catch (error) {
     console.error(`database error: ${error}`)
     res.sendStatus(500)

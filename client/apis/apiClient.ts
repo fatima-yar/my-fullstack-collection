@@ -29,7 +29,7 @@ export default function useDeleteBooks() {
   const queryClient = useQueryClient()
   return useMutation({
     mutationFn: async (id: number) => {
-      await request.delete(`/api/v1/books/${id}`)
+      await request.delete(`${rootUrl}${id}`)
     },
     onSuccess: async () => {
       queryClient.invalidateQueries({ queryKey: ['book'] })

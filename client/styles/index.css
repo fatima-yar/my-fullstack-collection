@@ -1,19 +1,21 @@
 html,
 body {
-  background-image: url('/images/books.jpg');
-  margin: 0;
+  margin-top: 0;
   padding: 0;
+}
+html {
+  background-image: url('/images/books2.jpg');
 }
 
 .header {
   text-align: center;
   font-size: 30px;
   background-color: rgba(77, 119, 119, 0.6);
-  max-width: 50%; /* Adjust the max-width as per your design */
-  padding: 20px; /* Adjust padding to increase or decrease space around content */
+  max-width: 50%;
+  padding: 20px;
   border-radius: 30px;
-  margin: 50px auto; /* Center horizontally and add vertical margin */
-  box-sizing: border-box; /* Ensures padding is included in the max-width */
+  margin: 50px auto;
+  box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .new-book {
@@ -23,7 +25,17 @@ body {
   border-radius: 10px;
 }
 .input-large {
-  height: 40px; /* Adjust height as needed */
+  height: 40px;
+}
+.deleteBtn {
+  width: 200px;
+  color: aliceblue;
+  height: 40px;
+  background-color: darkred;
+  font-size: medium;
+  margin-top: 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 .button {
   background-color: rgb(28, 58, 92);

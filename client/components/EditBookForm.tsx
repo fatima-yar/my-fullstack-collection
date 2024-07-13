@@ -42,13 +42,15 @@ function EditBookForm(props: Props) {
 
   function handleDelete() {
     const id = Number(props.id)
-    deleteBooks.mutate(id, {
-      onSuccess: () => {
-        window.location.reload()
-      },
-    })
+    if (window.confirm('Are you sure?')) {
+      deleteBooks.mutate(id, {
+        onSuccess: () => {
+          window.location.reload()
+        },
+      })
 
-    console.log(id)
+      console.log(id)
+    }
   }
 
   return (
@@ -65,8 +67,9 @@ function EditBookForm(props: Props) {
           <option value="0">No</option>
         </select>
       </label>
-      <button type="button" onClick={handleDelete}>
-        Delete
+      <br></br>
+      <button className="deleteBtn" type="button" onClick={handleDelete}>
+        Delete This Book
       </button>
     </form>
   )

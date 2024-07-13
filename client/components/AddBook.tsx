@@ -78,7 +78,12 @@ function AddBook() {
           aria-label="input new book"
           placeholder="What is your new book"
           value={form}
-          style={{ height: '40px' }} // Adjust the height value as needed
+          style={{
+            width: '100%',
+            maxWidth: '400px',
+            height: '40px',
+            boxSizing: 'border-box',
+          }}
         />
         <br></br>
 
@@ -90,7 +95,12 @@ function AddBook() {
           aria-label="input new book"
           placeholder="Who is the author?"
           value={author}
-          style={{ height: '40px' }} // Adjust the height value as needed
+          style={{
+            width: '100%',
+            maxWidth: '400px',
+            height: '40px',
+            boxSizing: 'border-box',
+          }}
         />
 
         <br></br>
@@ -102,7 +112,12 @@ function AddBook() {
           aria-label="input new book"
           placeholder="How many pages?"
           value={pages}
-          style={{ height: '40px' }} // Adjust the height value as needed
+          style={{
+            width: '100%',
+            maxWidth: '400px',
+            height: '40px',
+            boxSizing: 'border-box',
+          }}
           type="number"
         />
         <br></br>

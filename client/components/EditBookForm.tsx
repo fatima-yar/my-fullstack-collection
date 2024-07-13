@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { useState, useEffect } from 'react'
 import { UpdatedBook } from '../../models/books'
-import { updateBook } from '../apis/apiClient'
+import useDeleteBooks, { updateBook } from '../apis/apiClient'
 import React from 'react'
 
 interface Props {
@@ -19,8 +19,10 @@ function EditBookForm(props: Props) {
       queryClient.invalidateQueries({ queryKey: ['books'] })
     },
   })
+  const deleteBooks = useDeleteBooks()
 
   const [isDone, setIsDone] = useState(false)
+  const [del, setDel] = useState()
 
   useEffect(() => {
     setIsDone(props.completed)
@@ -38,6 +40,17 @@ function EditBookForm(props: Props) {
     console.log(booleanValue)
   }
 
+  function handleDelete() {
+    const id = Number(props.id)
+    deleteBooks.mutate(id, {
+      onSuccess: () => {
+        window.location.reload()
+      },
+    })
+
+    console.log(id)
+  }
+
   return (
     // <form onSubmit={(e) => handleSubmit(e)}>
     <form>
@@ -52,7 +65,9 @@ function EditBookForm(props: Props) {
           <option value="0">No</option>
         </select>
       </label>
-      {/* <button type="submit">Submit</button> */}
+      <button type="button" onClick={handleDelete}>
+        Delete
+      </button>
     </form>
   )
 }

@@ -25,10 +25,10 @@ export async function updateBook({ id, completed }: UpdatedBook) {
   await request.patch(`${rootUrl}${id}`).send({ completed })
 }
 
-export default function useDeleteBooks(id: number) {
+export default function useDeleteBooks() {
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: async () => {
+    mutationFn: async (id: number) => {
       await request.delete(`/api/v1/books/${id}`)
     },
     onSuccess: async () => {

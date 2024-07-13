@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-size: 16px; /* Base font size */
+  font-size: 16px;
 }
 
 html {
@@ -11,71 +11,70 @@ html {
 
 .header {
   text-align: center;
-  font-size: 1.875rem; /* 30px / 16px */
+  font-size: 1.875rem;
   background-color: rgba(77, 119, 119, 0.6);
-  max-width: 80%;
-  padding: 1.25rem; /* 20px / 16px */
+  max-width: 40%;
+  padding: 1.25rem;
   border-radius: 30px;
-  margin: 3.125rem auto; /* 50px / 16px */
+  margin: 3.125rem auto;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .new-book {
-  margin-top: 0.625rem; /* 10px / 16px */
+  margin-top: 0.625rem;
   background-color: rgb(227, 227, 227);
   width: 80%;
-  max-width: 25rem; /* 400px / 16px */
+  max-width: 25rem;
   border-radius: 10px;
 }
 
 .input-large {
-  height: 2.5rem; /* 40px / 16px */
+  height: 2.5rem;
 }
 
 .deleteBtn {
-  width: 12.5rem; /* 200px / 16px */
+  width: 12.5rem;
   color: aliceblue;
-  height: 2.5rem; /* 40px / 16px */
+  height: 2.5rem;
   background-color: darkred;
-  font-size: 1rem; /* 16px */
-  margin-top: 1.875rem; /* 30px / 16px */
+  font-size: 1rem;
+  margin-top: 1.875rem;
   border-radius: 10px;
-  margin-bottom: 1.25rem; /* 20px / 16px */
+  margin-bottom: 1.25rem;
 }
 
 .button {
   background-color: rgb(28, 58, 92);
-  height: 2.5rem; /* 40px / 16px */
-  width: 6.25rem; /* 100px / 16px */
-  margin-top: 0.625rem; /* 10px / 16px */
+  height: 2.5rem;
+  width: 12.5rem;
+  margin-top: 3rem;
   border-radius: 10px;
   color: aliceblue;
-  font-size: 1rem; /* 16px */
+  font-size: 1rem;
 }
 
 .bookslist {
   text-align: center;
-  font-size: 1.875rem; /* 30px / 16px */
+  font-size: 1.875rem;
   background-color: rgba(154, 112, 65, 0.6);
-  max-width: 80%;
-  padding: 1.25rem; /* 20px / 16px */
+  max-width: 40%;
+  padding: 1.25rem;
   border-radius: 30px;
-  margin: 3.125rem auto; /* 50px / 16px */
+  margin: 3.125rem auto;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .drop {
   background-color: rgb(180, 180, 180);
-  height: 2.5rem; /* 40px / 16px */
-  width: 6.25rem; /* 100px / 16px */
-  margin-top: 0.625rem; /* 10px / 16px */
+  height: 2.5rem;
+  width: 6.25rem;
+  margin-top: 3rem;
   border-radius: 10px;
   color: black;
-  font-size: 1rem; /* 16px */
+  font-size: 1rem;
   text-align: center;
-  margin-left: 1.25rem; /* 20px / 16px */
 }
 
 ul {
@@ -86,11 +85,11 @@ ul {
 
 .mybook {
   text-align: center;
-  font-size: 3.125rem; /* 50px / 16px */
+  font-size: 3.125rem;
   max-width: 80%;
-  padding: 1.25rem; /* 20px / 16px */
+  padding: 1.25rem;
   border-radius: 30px;
-  margin: 3.125rem auto; /* 50px / 16px */
+  margin: 3.125rem auto;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

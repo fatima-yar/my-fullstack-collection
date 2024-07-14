@@ -9,7 +9,12 @@ export async function fetchBooks(): Promise<Book[]> {
   return res.body
 }
 
-export async function addBook(book: string, pages: number, author: string) {
+export async function addBook(
+  book: string,
+  pages: number,
+  author: string,
+  name: string,
+) {
   console.log('API:', book)
 
   const newBook: Book = {
@@ -17,6 +22,7 @@ export async function addBook(book: string, pages: number, author: string) {
     completed: false,
     author: author,
     pages: pages,
+    name: name,
   }
   await request.post(rootUrl).send(newBook)
 }

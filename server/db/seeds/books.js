@@ -6,6 +6,7 @@ export async function seed(knex) {
       title: 'Poor Folk',
       author: 'Dostoevsky',
       pages: 152,
+      name: 'Fatima',
       completed: true,
     },
     {
@@ -13,6 +14,7 @@ export async function seed(knex) {
       title: 'The Midnight Library',
       author: 'Matt Haig',
       pages: 304,
+      name: 'Fatima',
       completed: true,
     },
     {
@@ -20,6 +22,7 @@ export async function seed(knex) {
       title: '1984',
       author: 'George Orwell',
       pages: 328,
+      name: 'Fatima',
       completed: true,
     },
     {
@@ -27,6 +30,7 @@ export async function seed(knex) {
       title: 'Friends, Lovers, The Big Terrible Thing',
       author: 'Matthew Perry',
       pages: 272,
+      name: 'Fatima',
       completed: false,
     },
     {
@@ -34,6 +38,7 @@ export async function seed(knex) {
       title: 'Kafka on the shore',
       author: 'Haruki Murakami',
       pages: 505,
+      name: 'Fatima',
       completed: true,
     },
   ])

@@ -5,6 +5,7 @@ export interface Book {
   author: string
   pages: number
   completed: boolean
+  name: string
 }
 export interface UpdatedBook {
   id: number | undefined

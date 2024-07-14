@@ -21,7 +21,6 @@ function App() {
       <>
         <header className="contents">
           <div className="header">
-            <h1>My Collection</h1>
             <AddBook />
             <br />
           </div>

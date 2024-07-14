@@ -4,11 +4,33 @@ body {
   padding: 0;
   font-size: 16px;
 }
+h4 {
+  margin: 0;
+  padding: 0;
+  padding-top: 1em;
+}
 
 html {
   background-image: url('/images/books2.jpg');
 }
-
+.titleName {
+  padding-top: 1em;
+  padding-bottom: 0;
+}
+.form {
+  padding-top: 0;
+}
+.name {
+  font-size: small;
+}
+.page {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.list {
+  color: darkred;
+  text-shadow: 3em;
+}
 .header {
   text-align: center;
   font-size: 1.875rem;
@@ -34,7 +56,7 @@ html {
 }
 
 .deleteBtn {
-  width: 12.5rem;
+  width: 8rem;
   color: aliceblue;
   height: 2.5rem;
   background-color: darkred;
@@ -47,7 +69,7 @@ html {
 .button {
   background-color: rgb(28, 58, 92);
   height: 2.5rem;
-  width: 12.5rem;
+  width: 8rem;
   margin-top: 3rem;
   border-radius: 10px;
   color: aliceblue;
@@ -65,12 +87,15 @@ html {
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+p {
+  padding: 0%;
+  margin: 0;
+}
 .drop {
   background-color: rgb(180, 180, 180);
   height: 2.5rem;
-  width: 6.25rem;
-  margin-top: 3rem;
+  width: 8rem;
+  margin-top: 1rem;
   border-radius: 10px;
   color: black;
   font-size: 1rem;

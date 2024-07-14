@@ -14,10 +14,11 @@ export default function BookList({ books }: BookListprops) {
       <ul>
         {books.map((book: Book) => (
           <li key={book.id} className="bookslist">
-            <h3>Title: {book.title}</h3>
-            <p>Author: {book.author}</p>
-            <p>Pages: {book.pages}</p>
+            <h3>{book.title}</h3>
+            <p>By {book.author}</p>
+            <p className="page">{book.pages} Pages</p>
             <EditBookForm id={book.id} completed={book.completed} />
+            <p className="name">Recommended by {book.name}</p>
             {/* <p>Compeleted? {book.completed}</p> */}
           </li>
         ))}

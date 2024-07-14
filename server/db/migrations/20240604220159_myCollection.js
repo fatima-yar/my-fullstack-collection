@@ -4,6 +4,7 @@ export function up(knex) {
     table.string('title')
     table.string('author')
     table.integer('pages')
+    table.string('name')
     table.boolean('completed')
   })
 }

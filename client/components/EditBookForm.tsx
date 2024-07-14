@@ -42,7 +42,9 @@ function EditBookForm(props: Props) {
 
   function handleDelete() {
     const id = Number(props.id)
-    if (window.confirm('Are you sure?')) {
+    const password = window.prompt('Please enter admin password')
+    const correctPassword = 'khitkhit'
+    if (password === correctPassword) {
       deleteBooks.mutate(id, {
         onSuccess: () => {
           window.location.reload()
@@ -50,14 +52,16 @@ function EditBookForm(props: Props) {
       })
 
       console.log(id)
+    } else {
+      alert('Your password is not correct')
     }
   }
 
   return (
     // <form onSubmit={(e) => handleSubmit(e)}>
-    <form>
+    <form className="form">
       <label>
-        Completed Yet?
+        <h4>Must read?</h4>
         <select
           className="drop"
           onChange={(e) => handleChange(e)}
@@ -69,7 +73,7 @@ function EditBookForm(props: Props) {
       </label>
       <br></br>
       <button className="deleteBtn" type="button" onClick={handleDelete}>
-        Delete This Book
+        Delete
       </button>
     </form>
   )

@@ -6,51 +6,52 @@ Welcome to Universal Book Collection, a full-stack application project where I m
 
 These are the steps I followed to develop the Universal Book Collection platform:
 
-## Choosing Your Data Set
+### Choosing Your Data Set
 
 I selected books as the primary dataset for this project to maintain simplicity in data management.
 
-## Building the Database
+### Building the Database
 
-- Designed a database schema tailored for storing book details.
-- Implemented database migrations and seeded initial data to populate the database.
+- Designed a database schema tailored for storing book details using SQLite3.
+- Implemented database migrations and seeded initial data to populate the database using Knex.
 
-## Building the API
+### Building the API
 
-- Developed robust API endpoints to facilitate seamless data retrieval.
+- Developed robust API endpoints using Node.js to facilitate seamless data retrieval.
 - Thoroughly tested API functionality using Insomnia to ensure reliability and accuracy.
 
-## Frontend Development
+### Frontend Development
 
-### Setting the Stage
+#### Setting the Stage
 
 - Created a React component with static HTML to initialize the frontend interface.
+- Applied CSS styling to enhance the visual appeal of the application.
 
-### Building the API Client
+#### Building the API Client
 
-- Constructed an efficient API client within the frontend architecture to interact with backend endpoints.
+- Constructed an efficient API client within the frontend architecture using TypeScript to interact with backend endpoints.
 
-### Querying Data
+#### Querying Data
 
-- Utilized the `useQuery` hook to fetch and display book collection data dynamically.
+- Utilized the `useQuery` hook in React to fetch and display book collection data dynamically.
 
-### Managing Data
+#### Managing Data
 
-#### Create Data
+##### Create Data
 
-- Introduced a form component to add new books to the collection.
-- Implemented data mutation using the `useMutation` hook for creating new entries.
+- Introduced a form component in React to add new books to the collection.
+- Implemented data mutation using the `useMutation` hook in TypeScript for creating new entries via API.
 
-#### Delete Data
+##### Delete Data
 
-- Integrated functionality to delete existing book entries securely.
+- Integrated functionality in React to delete existing book entries securely.
 
-#### Update Data
+##### Update Data
 
-- Developed a form component for updating book details.
-- Utilized the `useMutation` hook for seamless data updates.
+- Developed a form component in React for updating book details.
+- Utilized the `useMutation` hook in TypeScript for seamless data updates via API.
 
 ## Stretch Goals
 
-- Ensured form accessibility and usability, complying with keyboard navigation standards.
+- Ensured form accessibility and usability in React, complying with keyboard navigation standards.
 - Applied CSS styling to enhance the application's visual appeal and user experience.

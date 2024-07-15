@@ -18,7 +18,7 @@ I selected books as the primary dataset for this project to maintain simplicity 
 ### Building the API
 
 - Developed robust API endpoints using Node.js to facilitate seamless data retrieval.
-- Thoroughly tested API functionality using Insomnia to ensure reliability and accuracy.
+
 
 ### Frontend Development
 

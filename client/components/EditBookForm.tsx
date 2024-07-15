@@ -43,7 +43,7 @@ function EditBookForm(props: Props) {
   function handleDelete() {
     const id = Number(props.id)
     const password = window.prompt('Please enter admin password')
-    const correctPassword = 'khitkhit'
+    const correctPassword = 'mybooks'
     if (password === correctPassword) {
       deleteBooks.mutate(id, {
         onSuccess: () => {

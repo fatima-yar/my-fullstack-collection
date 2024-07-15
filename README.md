@@ -51,7 +51,4 @@ I selected books as the primary dataset for this project to maintain simplicity 
 - Developed a form component in React for updating book details.
 - Utilized the `useMutation` hook in TypeScript for seamless data updates via API.
 
-## Stretch Goals
 
-- Ensured form accessibility and usability in React, complying with keyboard navigation standards.
-- Applied CSS styling to enhance the application's visual appeal and user experience.

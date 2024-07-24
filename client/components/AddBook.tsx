@@ -12,14 +12,6 @@ function AddBook() {
     name: string
   }
 
-  // const addBookMutation = useMutation({
-  //   mutationFn: (title: string) => addBook(title),
-  //   onSuccess: () => {
-  //     queryClient.invalidateQueries({
-  //       queryKey: ['books'],
-  //     })
-  //   },
-  // })
   const addBookMutation = useMutation({
     mutationFn: async (props: MutationProps) => {
       return addBook(props.title, props.pages, props.author, props.name)

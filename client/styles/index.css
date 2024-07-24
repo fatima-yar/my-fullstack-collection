@@ -120,19 +120,19 @@ ul {
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 510px) {
+@media (max-width: 800px) {
   .header,
   .bookslist,
   .mybook {
     font-size: 1.5rem; /* Smaller font for smaller screens */
-    max-width: 90%;
+    max-width: 70%;
   }
 
   .new-book,
   .deleteBtn,
   .button,
   .drop {
-    width: 90%; /* Full width for smaller screens */
+    width: 70%; /* Full width for smaller screens */
   }
 
   .deleteBtn,
